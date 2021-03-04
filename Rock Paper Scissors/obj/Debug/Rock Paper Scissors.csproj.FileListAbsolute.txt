@@ -1,0 +1,19 @@
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\Rock Paper Scissors.exe.config
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\Rock Paper Scissors.exe
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\Rock Paper Scissors.pdb
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors.csprojAssemblyReference.cache
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\MainWindow.g.cs
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\App.g.cs
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors_MarkupCompile.cache
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors_MarkupCompile.lref
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\MainWindow.baml
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors.g.resources
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock_Paper_Scissors.Properties.Resources.resources
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors.csproj.GenerateResource.cache
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors.csproj.CoreCompileInputs.cache
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors.exe
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors.pdb
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\img\paper.png
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\img\rock.png
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\img\scissors.png
+C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors_Content.g.cs

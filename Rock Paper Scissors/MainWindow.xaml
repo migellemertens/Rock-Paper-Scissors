@@ -1,0 +1,18 @@
+﻿<Window x:Class="Rock_Paper_Scissors.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rock_Paper_Scissors"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Initialized="Window_Initialized">
+    <Grid>
+        <Button x:Name="BtnRock" Content="Rock" HorizontalAlignment="Left" Margin="26,54,0,0" VerticalAlignment="Top" Width="75" Click="BtnRock_Click"/>
+        <Button x:Name="BtnPaper" Content="Paper" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="26,125,0,0" Click="BtnPaper_Click"/>
+        <Button x:Name="BtnScissors" Content="Scissors" HorizontalAlignment="Left" Margin="26,204,0,0" VerticalAlignment="Top" Width="75" Click="BtnScissors_Click"/>
+        <TextBlock x:Name="TxtBlResultaat" HorizontalAlignment="Left" Margin="26,327,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="66" Width="238"/>
+        <Canvas x:Name="paperCanvas" HorizontalAlignment="Left" Height="272" Margin="229,35,0,0" VerticalAlignment="Top" Width="550"/>
+        <Canvas x:Name="imageCanvas" HorizontalAlignment="Left" Height="150" Margin="248,54,0,0" VerticalAlignment="Top" Width="472"/>
+
+    </Grid>
+</Window>
