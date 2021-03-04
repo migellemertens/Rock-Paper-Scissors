@@ -70,6 +70,8 @@ namespace Rock_Paper_Scissors
 
         private void CheckForWinner()
         {
+            DrawRectangle();
+
             Brush win = new SolidColorBrush(Colors.Green);
             Brush loss = new SolidColorBrush(Colors.Red);
             Brush draw = new SolidColorBrush(Colors.Gray);
@@ -145,7 +147,7 @@ namespace Rock_Paper_Scissors
 
         private void ShowImages()
         {
-            imageCanvas.Children.Clear();
+            paperCanvas.Children.Clear();
             string user = _userChoice.ToString().ToLower();
             string computer = _computerChoice.ToString().ToLower();
             TxtBlResultaat.Text = user;
@@ -156,10 +158,10 @@ namespace Rock_Paper_Scissors
             userImage.EndInit();
             Image userChoice = new Image();
             userChoice.Source = userImage;
-            userChoice.Margin = new Thickness(5, 13, 0, 0);
+            userChoice.Margin = new Thickness(15, 23, 0, 0);
             userChoice.Width = 200;
             userChoice.Height = 200;
-            imageCanvas.Children.Add(userChoice);
+            paperCanvas.Children.Add(userChoice);
 
             BitmapImage computerImage = new BitmapImage();
             computerImage.BeginInit();
@@ -167,12 +169,10 @@ namespace Rock_Paper_Scissors
             computerImage.EndInit();
             Image computerChoice = new Image();
             computerChoice.Source = computerImage;
-            computerChoice.Margin = new Thickness(270, 13, 0, 0);
+            computerChoice.Margin = new Thickness(280, 23, 0, 0);
             computerChoice.Width = 200;
             computerChoice.Height = 200;
-            imageCanvas.Children.Add(computerChoice);
-
-
+            paperCanvas.Children.Add(computerChoice);
 
         }
 

@@ -12,7 +12,6 @@
         <Button x:Name="BtnScissors" Content="Scissors" HorizontalAlignment="Left" Margin="26,204,0,0" VerticalAlignment="Top" Width="75" Click="BtnScissors_Click"/>
         <TextBlock x:Name="TxtBlResultaat" HorizontalAlignment="Left" Margin="26,327,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="66" Width="238"/>
         <Canvas x:Name="paperCanvas" HorizontalAlignment="Left" Height="272" Margin="229,35,0,0" VerticalAlignment="Top" Width="550"/>
-        <Canvas x:Name="imageCanvas" HorizontalAlignment="Left" Height="150" Margin="248,54,0,0" VerticalAlignment="Top" Width="472"/>
 
     </Grid>
 </Window>
