@@ -13,7 +13,3 @@ C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\o
 C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors.csproj.CoreCompileInputs.cache
 C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors.exe
 C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors.pdb
-C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\img\paper.png
-C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\img\rock.png
-C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\img\scissors.png
-C:\Users\migelle\Documents\Development\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\Rock Paper Scissors_Content.g.cs

@@ -98,16 +98,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="README.txt" />
-    <Resource Include="img\logo.png" />
-    <Content Include="img\paper.png">
+    <Resource Include="img\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="img\rock.png">
+    </Resource>
+    <Resource Include="img\paper.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="img\scissors.png">
+    </Resource>
+    <Resource Include="img\rock.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </Resource>
+    <Resource Include="img\scissors.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
