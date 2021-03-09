@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Rock_Paper_Scissors
 {
@@ -20,10 +21,16 @@ namespace Rock_Paper_Scissors
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region MEMBER VARIABLES
+        private DispatcherTimer time = new DispatcherTimer();
         private Type _userChoice;
         private Type _computerChoice;
         private Rectangle _userRec;
         private Rectangle _computerRec;
+        private int _userScore;
+        private int _computerScore;
+        #endregion
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,7 +38,15 @@ namespace Rock_Paper_Scissors
 
         private void Window_Initialized(object sender, EventArgs e)
         {
-            DrawRectangle();
+            NewGame();
+            time.Interval = TimeSpan.FromMilliseconds(1000);
+            time.Tick += UpdateTime;
+            time.Start();
+        }
+
+        private void UpdateTime(object sender, EventArgs e)
+        {
+            LblShowTime.Content = DateTime.Now.ToString("d MMMM yyyy HH:mm:ss");
         }
 
         #region BUTTON CHOICES
@@ -76,42 +91,27 @@ namespace Rock_Paper_Scissors
             Brush loss = new SolidColorBrush(Colors.Red);
             Brush draw = new SolidColorBrush(Colors.Gray);
 
-            string returnValue;
             int user = (int)_userChoice;
             int computer = (int)_computerChoice % 3;
 
             if (user % 3 == computer)
             {
-                returnValue = "Draw";
                 UpdateRectangle(draw, draw);
+                ShowScore();
             }
             else if (user == computer + 1)
             {
-                returnValue = "You Win!";
                 UpdateRectangle(win, loss);
+                _userScore++;
+                ShowScore();
             }
             else
             {
-                returnValue = "You Lose!";
                 UpdateRectangle(loss, win);
+                _computerScore++;
+                ShowScore();
             }
 
-            GenerateResult(returnValue,user,computer);
-        }
-
-        private void GenerateResult(string outcome, int user, int computer)
-        {
-            //TxtBlResultaat.Text = "";
-            //StringBuilder result = new StringBuilder();
-            //result.Append($"User has chosen: {_userChoice}\n");
-            //result.Append(user);
-            //result.Append(Environment.NewLine + Environment.NewLine);
-            //result.Append($"Computer has chosen: {_computerChoice}\n");
-            //result.Append(computer);
-            //result.Append(Environment.NewLine + Environment.NewLine);
-            //result.Append(outcome);
-
-            //TxtBlResultaat.Text = result.ToString();
         }
 
         private void DrawRectangle()
@@ -145,12 +145,12 @@ namespace Rock_Paper_Scissors
             _computerRec.Stroke = computer;
         }
 
+        #region SHOW PLAYING FIELD IMAGES
         private void ShowImages()
         {
             paperCanvas.Children.Clear();
             string user = _userChoice.ToString().ToLower();
             string computer = _computerChoice.ToString().ToLower();
-            TxtBlResultaat.Text = user;
             
             BitmapImage userImage = new BitmapImage();
             userImage.BeginInit();
@@ -169,12 +169,42 @@ namespace Rock_Paper_Scissors
             computerImage.EndInit();
             Image computerChoice = new Image();
             computerChoice.Source = computerImage;
-            computerChoice.Margin = new Thickness(280, 23, 0, 0);
+            computerChoice.Margin = new Thickness(295, 23, 0, 0);
             computerChoice.Width = 200;
             computerChoice.Height = 200;
             paperCanvas.Children.Add(computerChoice);
 
         }
+        #endregion
 
+        private void NewGame()
+        {
+            DrawRectangle();
+            _userRec.Stroke = new SolidColorBrush(Colors.Gray);
+            _computerRec.Stroke = new SolidColorBrush(Colors.Gray);
+            _userScore = 0;
+            _computerScore = 0;
+        }
+
+        private void ShowScore()
+        {
+            LblUserScore.Content = _userScore;
+            LblComputerScore.Content = _computerScore;
+        }
+
+        private void MnuClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MnuRules_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Game rules:\n" +
+                $"Rock beats Scissors\n" +
+                $"Paper beats Rock\n" +
+                $"Scissors beats papers",
+                "Rules",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
     }
 }

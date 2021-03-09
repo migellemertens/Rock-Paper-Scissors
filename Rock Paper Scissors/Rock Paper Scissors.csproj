@@ -97,6 +97,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="README.txt" />
+    <Resource Include="img\logo.png" />
     <Content Include="img\paper.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

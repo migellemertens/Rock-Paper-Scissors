@@ -5,13 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rock_Paper_Scissors"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Initialized="Window_Initialized">
+        Title="Rock Paper Scissors" Height="488.96" Width="800" Initialized="Window_Initialized">
     <Grid>
+        <Menu HorizontalAlignment="Left" Height="19" Margin="1,0,0,0" VerticalAlignment="Top" Width="791">
+            <MenuItem Header="File">
+                <MenuItem x:Name="MnuClose" Header="Close" Click="MnuClose_Click"/>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem x:Name="MnuRules" Header="Rules" Click="MnuRules_Click"/>
+            </MenuItem>
+        </Menu>
         <Button x:Name="BtnRock" Content="Rock" HorizontalAlignment="Left" Margin="26,54,0,0" VerticalAlignment="Top" Width="75" Click="BtnRock_Click"/>
         <Button x:Name="BtnPaper" Content="Paper" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="26,125,0,0" Click="BtnPaper_Click"/>
         <Button x:Name="BtnScissors" Content="Scissors" HorizontalAlignment="Left" Margin="26,204,0,0" VerticalAlignment="Top" Width="75" Click="BtnScissors_Click"/>
-        <TextBlock x:Name="TxtBlResultaat" HorizontalAlignment="Left" Margin="26,327,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="66" Width="238"/>
         <Canvas x:Name="paperCanvas" HorizontalAlignment="Left" Height="272" Margin="229,35,0,0" VerticalAlignment="Top" Width="550"/>
+        <Label x:Name="LblUserScore" Content="" HorizontalAlignment="Left" Margin="308,312,0,0" VerticalAlignment="Top" Height="72" Width="88" FontSize="48" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="LblComputerScore" Content="" HorizontalAlignment="Left" Margin="590,307,0,0" VerticalAlignment="Top" Height="72" Width="88" FontSize="48" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <StatusBar HorizontalAlignment="Left" Height="44" Margin="0,406,0,0" VerticalAlignment="Top" Width="792">
+            <Label x:Name="LblReady" Content="Ready" Margin="5,0,0,0" FontStyle="Italic"/>
+            <Image Source="img/logo.png" Margin="5,0,0,0"/>
+            <Label x:Name="LblUserName" Content="Migelle Metens" Margin="5,0,0,0" FontStyle="Italic"/>
+            <Label x:Name="LblShowTime" Content="" Margin="400,0,0,0"/>
+        </StatusBar>
 
     </Grid>
+
 </Window>
